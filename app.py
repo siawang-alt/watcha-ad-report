@@ -1,5 +1,7 @@
 """왓챠 광고 리포팅 대시보드 - 메인 페이지"""
 
+import os
+
 import streamlit as st
 import pandas as pd
 
@@ -10,6 +12,8 @@ from utils.data_processor import (
     calculate_derived_metrics,
 )
 from config.metrics import DISPLAY_NAMES
+
+SAMPLE_DATA_PATH = os.path.join(os.path.dirname(__file__), "sample_data", "sample_ad_report.csv")
 
 st.set_page_config(
     page_title="왓챠 광고 리포트",
@@ -22,11 +26,18 @@ st.title("왓챠 광고 리포팅 대시보드")
 
 st.markdown("---")
 
-# --- 빠른 업로드 & 자동 요약 ---
-st.markdown("### 파일을 올리면 바로 요약해드립니다")
+# --- 샘플 데이터 자동 로드 ---
+if "df" not in st.session_state or st.session_state.df is None:
+    if os.path.exists(SAMPLE_DATA_PATH):
+        raw_df = pd.read_csv(SAMPLE_DATA_PATH)
+        mapping = auto_map_columns(raw_df)
+        df = apply_column_mapping(raw_df, mapping)
+        df = calculate_derived_metrics(df)
+        st.session_state.df = df
 
+# --- 파일 업로드 (실제 데이터로 교체) ---
 uploaded_file = st.file_uploader(
-    "왓챠 대시보드에서 다운로드한 파일을 여기에 드래그하세요",
+    "새 데이터를 올리면 아래 내용이 교체됩니다",
     type=["csv", "xlsx", "xls"],
 )
 
@@ -37,6 +48,7 @@ if uploaded_file is not None:
         df = apply_column_mapping(raw_df, mapping)
         df = calculate_derived_metrics(df)
         st.session_state.df = df
+        st.success("새 데이터가 반영되었습니다!")
     except Exception as e:
         st.error(f"파일을 읽는 중 오류가 발생했습니다: {e}")
         st.stop()
