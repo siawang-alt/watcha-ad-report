@@ -169,9 +169,7 @@ with tab_watcha:
             """
 | 항목 | 내용 |
 |------|------|
-| **가격** | 1,500만원/주 |
 | **예상 노출수** | 약 50만 |
-| **비고** | VAT 별도 |
 """
         )
 
@@ -196,10 +194,8 @@ with tab_watcha:
             """
 | 항목 | 내용 |
 |------|------|
-| **가격** | 500만원/주 |
 | **예상 노출수** | 약 200만 |
 | **예상 CTR** | 약 0.21% |
-| **비고** | VAT 별도 |
 """
         )
 
@@ -224,10 +220,8 @@ with tab_watcha:
             """
 | 항목 | 내용 |
 |------|------|
-| **가격** | 500만원/주 |
 | **예상 노출수** | 약 45만 |
 | **예상 CTR** | 약 2.1% |
-| **비고** | VAT 별도 |
 """
         )
 
@@ -256,7 +250,7 @@ with tab_pedia:
             "location": "앱, 웹 진입 시 전면 팝업",
             "slots": "총 2구좌, 1주일 50% 랜덤 노출",
             "device": "APP + WEB",
-            "price": "500만원/주",
+            "price": "",
             "impressions": "약 60만",
             "ctr": "약 2.9%",
             "material": "이미지 소재, 외부 랜딩 가능",
@@ -267,7 +261,7 @@ with tab_pedia:
             "location": "메인 홈 화면 / 왓챠피디아 세상 페이지",
             "slots": "총 2구좌, 1주일 50% 랜덤 노출",
             "device": "APP + WEB",
-            "price": "500만원/주",
+            "price": "",
             "impressions": "약 150만",
             "ctr": "약 0.24%",
             "material": "이미지 및 동영상 소재 가능, 외부 랜딩 가능",
@@ -278,7 +272,7 @@ with tab_pedia:
             "location": "메인 홈 화면 밀어 배너 1지면",
             "slots": "총 2구좌, 1주일 50% 랜덤 노출",
             "device": "APP + WEB",
-            "price": "500만원/주",
+            "price": "",
             "impressions": "약 70만",
             "ctr": "약 0.6%",
             "material": "이미지 소재, 외부 랜딩 가능",
@@ -289,7 +283,7 @@ with tab_pedia:
             "location": "홈 / 왓챠피디아 세상 / 검색 / 나의 왓챠 / 컬렉션 세상 등 6개 지면",
             "slots": "총 2구좌, 1주일 50% 랜덤 노출",
             "device": "APP + WEB",
-            "price": "1,000만원/주",
+            "price": "",
             "impressions": "약 500만",
             "ctr": "약 0.12%",
             "material": "이미지 소재, 외부 랜딩 가능",
@@ -300,7 +294,7 @@ with tab_pedia:
             "location": "왓챠피디아 HOT 랭킹 2순위 위치",
             "slots": "총 2구좌, 1주일 50% 랜덤 노출",
             "device": "APP + WEB",
-            "price": "200만원/주",
+            "price": "",
             "impressions": "약 45만",
             "ctr": "약 1%",
             "material": "영화/왓챠피디아 관련 콘텐츠만 가능, 이미지 소재, 외부 랜딩 가능",
@@ -311,7 +305,7 @@ with tab_pedia:
             "location": "앱 진입 시 전체화면(풀) 또는 하단(파셜)",
             "slots": "총 1구좌, 1주일 단독 노출",
             "device": "APP (iOS, Android)",
-            "price": "1,500만원/주",
+            "price": "",
             "impressions": "약 50만",
             "ctr": "-",
             "material": "이미지 소재만 가능",
@@ -322,7 +316,7 @@ with tab_pedia:
             "location": "검색 > 이벤트 탭 1주일 노출 + 전면 팝업 3일",
             "slots": "이벤트 전용 구좌",
             "device": "APP + WEB",
-            "price": "50만원/주",
+            "price": "",
             "impressions": "약 20만",
             "ctr": "약 5,000명 참여",
             "material": "추가 광고 집행 시 할인 적용",
@@ -333,7 +327,7 @@ with tab_pedia:
             "location": "홈 핫 아이템 클릭 시 전용관 페이지로 이동",
             "slots": "광고 구좌 / 핫 아이템 / 전용 페이지 / 미디어믹스",
             "device": "APP + WEB",
-            "price": "1,000만원/주",
+            "price": "",
             "impressions": "-",
             "ctr": "-",
             "material": "영화/왓챠피디아 관련 콘텐츠 외 커스텀 드로어 집행 가능",
@@ -359,10 +353,8 @@ with tab_pedia:
                 f"""
 | 항목 | 내용 |
 |------|------|
-| **가격** | {product['price']} |
 | **예상 노출수** | {product['impressions']} |
 | **예상 CTR** | {product['ctr']} |
-| **비고** | VAT 별도 |
 """
             )
         st.markdown("---")
@@ -397,7 +389,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠",
                 "상품명": "스플래시",
-                "가격(만원/주)": 1500,
                 "예상 노출수(만)": 50,
                 "예상 CTR(%)": None,
                 "구좌": "1구좌 단독",
@@ -407,7 +398,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠",
                 "상품명": "보드 배너",
-                "가격(만원/주)": 500,
                 "예상 노출수(만)": 200,
                 "예상 CTR(%)": 0.21,
                 "구좌": "1구좌 단독",
@@ -417,7 +407,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠",
                 "상품명": "전면 팝업 배너",
-                "가격(만원/주)": 500,
                 "예상 노출수(만)": 45,
                 "예상 CTR(%)": 2.1,
                 "구좌": "2구좌 50%",
@@ -427,7 +416,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠피디아",
                 "상품명": "전면 팝업 배너",
-                "가격(만원/주)": 500,
                 "예상 노출수(만)": 60,
                 "예상 CTR(%)": 2.9,
                 "구좌": "2구좌 50%",
@@ -437,7 +425,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠피디아",
                 "상품명": "웹 배너",
-                "가격(만원/주)": 500,
                 "예상 노출수(만)": 150,
                 "예상 CTR(%)": 0.24,
                 "구좌": "2구좌 50%",
@@ -447,7 +434,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠피디아",
                 "상품명": "밀어 배너",
-                "가격(만원/주)": 500,
                 "예상 노출수(만)": 70,
                 "예상 CTR(%)": 0.6,
                 "구좌": "2구좌 50%",
@@ -457,7 +443,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠피디아",
                 "상품명": "드로어 배너",
-                "가격(만원/주)": 1000,
                 "예상 노출수(만)": 500,
                 "예상 CTR(%)": 0.12,
                 "구좌": "2구좌 50%",
@@ -467,7 +452,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠피디아",
                 "상품명": "랭킹 HOT 배너",
-                "가격(만원/주)": 200,
                 "예상 노출수(만)": 45,
                 "예상 CTR(%)": 1.0,
                 "구좌": "2구좌 50%",
@@ -477,7 +461,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠피디아",
                 "상품명": "스플래시",
-                "가격(만원/주)": 1500,
                 "예상 노출수(만)": 50,
                 "예상 CTR(%)": None,
                 "구좌": "1구좌 단독",
@@ -487,7 +470,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠피디아",
                 "상품명": "유저 참여 이벤트",
-                "가격(만원/주)": 50,
                 "예상 노출수(만)": 20,
                 "예상 CTR(%)": None,
                 "구좌": "이벤트 전용",
@@ -497,7 +479,6 @@ with tab_products:
             {
                 "플랫폼": "왓챠피디아",
                 "상품명": "전용관 페이지",
-                "가격(만원/주)": 1000,
                 "예상 노출수(만)": None,
                 "예상 CTR(%)": None,
                 "구좌": "전용 페이지",
@@ -514,24 +495,22 @@ with tab_products:
 
     st.dataframe(filtered, use_container_width=True, hide_index=True)
 
-    # 가격 vs 노출수 차트
-    st.markdown("### 가격 대비 노출수 비교")
-    fig = px.scatter(
-        filtered,
-        x="가격(만원/주)",
-        y="예상 노출수(만)",
-        color="플랫폼",
-        size="예상 노출수(만)",
-        text="상품명",
-        color_discrete_map={"왓챠": "#FF2D78", "왓챠피디아": "#4A90D9"},
-        height=450,
-    )
-    fig.update_traces(textposition="top center", marker=dict(sizemin=10))
-    fig.update_layout(
-        xaxis_title="가격 (만원/주)",
-        yaxis_title="예상 노출수 (만)",
-    )
-    st.plotly_chart(fig, use_container_width=True)
+    # 노출수 비교 차트
+    imp_data = filtered.dropna(subset=["예상 노출수(만)"])
+    if not imp_data.empty:
+        st.markdown("### 상품별 예상 노출수 비교")
+        fig = px.bar(
+            imp_data,
+            x="상품명",
+            y="예상 노출수(만)",
+            color="플랫폼",
+            text="예상 노출수(만)",
+            color_discrete_map={"왓챠": "#FF2D78", "왓챠피디아": "#4A90D9"},
+            height=450,
+        )
+        fig.update_traces(texttemplate="%{text}만", textposition="outside")
+        fig.update_layout(xaxis_title="", yaxis_title="예상 노출수 (만)")
+        st.plotly_chart(fig, use_container_width=True)
 
     # CTR 비교 차트
     ctr_data = filtered.dropna(subset=["예상 CTR(%)"])
@@ -561,8 +540,6 @@ with tab_products:
 |-----------|--------|
 | 광고 집행일로부터 **13~7 영업일 전** | 광고 최종 단가의 **50%** |
 | 광고 집행일로부터 **6영업일 전 ~ 라이브 이후** | 광고 최종 단가의 **100%** |
-
-*모든 가격은 VAT 별도입니다.*
 """
         )
 
@@ -587,10 +564,7 @@ with tab_contact:
                 "광고 목적 (선택)",
                 ["선택해주세요", "브랜드 인지도", "클릭 유도", "전환/가입", "이벤트 참여"],
             )
-            budget = st.selectbox(
-                "예산 규모 (선택)",
-                ["선택해주세요", "500만원 미만", "500~1,000만원", "1,000~3,000만원", "3,000만원 이상"],
-            )
+            budget = st.text_input("희망 집행 시기 (선택)")
 
         interested = st.multiselect(
             "관심 상품 (선택, 복수 선택 가능)",
